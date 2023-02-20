@@ -1,9 +1,11 @@
 /**** Reset ****/
-* {
+* { /* This is the universal selector */
   margin: 0;
   padding: 0;
   font-size: 16px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* Add this: */
+  box-sizing: border-box; /* You should always have this line in your code */
 }
 
 /**** Color variables ****/
@@ -17,6 +19,7 @@
 
 body {
   background-color: var(--basic-white);
+  margin-bottom: 100px;
 }
 
 /***** Typography ******/
@@ -40,11 +43,72 @@ h4 {
 }
 
 /**** Container *****/
+div.container{
+  width: 100vw;
+  padding: 20px;
+}
 
 /***** Header ******/
+div#header{
+  background-color: var(--secondary-red);
+  color: var(--basic-white);
+}
 
+ 
 /***** Navbar styles ****/
+
+nav ul li a img { 
+  width: 50px;
+}
+
+nav ul{
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav{
+   width: 100vw;
+  padding: 20px;
+  background-color: var(--basic-white);
+  position: fixed;
+  bottom: 0;
+}
+
 
 /***** Card styles ****/
 
+.card{
+  background-color: var(--primary-orange);
+  width: 100%;
+  padding: 20px 15px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.card > img {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.card > button {
+  background-color: var(--primary-blue);
+  color: var(--basic-white);
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
 /******* Search input *******/
+
+form>input.search-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid var(--primary-blue);
+}
+
+form>input.search-input::placeholder {
+  color: var(--primary-blue);
+}
